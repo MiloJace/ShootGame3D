@@ -976,6 +976,9 @@
           takeDamage(en.kind === 'brute' ? 14 : 8);
         }
       }
+      const bodyRadius = en.kind === 'brute' ? 0.75 : 0.5;
+      resolveObstacles(gp, bodyRadius);
+      clampToArena(gp);
     }
   }
 
